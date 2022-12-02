@@ -17,11 +17,11 @@ let metadata = await conn.groupMetadata(update.id)
 let participants = update.participants
 for (let num of participants) {
 if (update.action == 'remove'){
-var button = [{ buttonId: '!text_grup', buttonText: { displayText: 'さようなら 👋'}, type: 1 }]
+var button = [{ buttonId: '!text_grup', buttonText: { displayText: ' Semoga tenang di alam sana👋'}, type: 1 }]
 await conn.sendMessage(
 update.id, 
 {
-text: `*さようなら @${num.split("@")[0]}*\n*kalo mau balik lagi ke group ini, wajib bawa gorengan 1 truk😊*`,
+text: `*Selamat tinggal@${num.split("@")[0]}*\n*kalo mau balik lagi ke group ini, wajib bawa gorengan 1 truk😊*`,
 buttons: button,
 footer: metadata.subject, 
 mentions: [num] })
