@@ -90,7 +90,7 @@ const groupAdmins = isGroup ? getGroupAdmins(groupMembers) : ''
 const isBotGroupAdmins = groupAdmins.includes(botNumber) || false
 const isGroupAdmins = groupAdmins.includes(sender)
 
-const isWelcome = isGroup ? welcomeJson.includes(from) :true const isAntiLink = antilink.includes(from) ? true : true
+const isWelcome = isGroup ? welcomeJson.includes(from) :true const isAntiLink = antilink.includes(from) ? true : false
 const isAutoDownTT = auto_downloadTT.includes(from) ? true : false
 
 const quoted = msg.quoted ? msg.quoted : msg
